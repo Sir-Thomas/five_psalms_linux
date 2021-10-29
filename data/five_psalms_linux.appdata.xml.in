@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2021 Tommy Priest <tommy@sirthomas.xyz> -->
+<component type="desktop">
+    <id>com.github.sirthomas.five_psalms_linux</id>
+    <metadata_license>CC0</metadata_license>
+    <name>Five Psalms</name>
+    <summary>Read Psalms</summary>
+    <description>
+        <p>Read through the book of Psalms in a month by reading 5 each day</p>
+    </description>
+</component>

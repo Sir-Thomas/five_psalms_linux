@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Five Psalms
+GenericName=Read Psalms
+Comment=Read through the book of Psalms in a month by reading 5 each day
+Categories=
+Exec=com.github.sirthomas.five_psalms_linux
+Icon=com.github.sirthomas.five_psalms_linux
+Terminal=false
+Type=Application
+Keywords=psalms;bible;read;
+X-Purism-FormFactor=Workstation;Mobile;

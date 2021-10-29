@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sirthomas.five_psalms_linux package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sirthomas.five_psalms_linux\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 15:42-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Application.vala:12 data/five_psalms_linux.desktop.in:3
+#: data/five_psalms_linux.appdata.xml.in:6
+msgid "Five Psalms"
+msgstr ""
+
+#: data/five_psalms_linux.desktop.in:4 data/five_psalms_linux.appdata.xml.in:7
+msgid "Read Psalms"
+msgstr ""
+
+#: data/five_psalms_linux.desktop.in:5 data/five_psalms_linux.appdata.xml.in:9
+msgid "Read through the book of Psalms in a month by reading 5 each day"
+msgstr ""
+
+#: data/five_psalms_linux.desktop.in:11
+msgid "psalms;bible;read;"
+msgstr ""

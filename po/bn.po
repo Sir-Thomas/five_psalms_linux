@@ -1,0 +1,34 @@
+# Bengali translations for com.github.sirthomas.five_psalms_linux package.
+# Copyright (C) 2021 THE com.github.sirthomas.five_psalms_linux'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sirthomas.five_psalms_linux package.
+# Automatically generated, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sirthomas.five_psalms_linux\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-29 15:42-0500\n"
+"PO-Revision-Date: 2021-10-29 15:42-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Application.vala:12 data/five_psalms_linux.desktop.in:3
+#: data/five_psalms_linux.appdata.xml.in:6
+msgid "Five Psalms"
+msgstr ""
+
+#: data/five_psalms_linux.desktop.in:4 data/five_psalms_linux.appdata.xml.in:7
+msgid "Read Psalms"
+msgstr ""
+
+#: data/five_psalms_linux.desktop.in:5 data/five_psalms_linux.appdata.xml.in:9
+msgid "Read through the book of Psalms in a month by reading 5 each day"
+msgstr ""
+
+#: data/five_psalms_linux.desktop.in:11
+msgid "psalms;bible;read;"
+msgstr ""
