@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object id="window" class="GtkWindow">
+    <property name="title">Five Psalms</property>
+    <property name="default_height">812</property>
+    <property name="default_width">375</property>
+    <child type="titlebar">
+      <object class="AdwHeaderBar">
+        <property name="centering-policy">strict</property>
+        <child type="title">
+          <object class="AdwViewSwitcherTitle" id="title">
+            <property name="stack">stack</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+        <child>
+          <object id="stack" class="AdwViewStack">
+            <property name="margin_top">15</property>
+            <property name="margin_bottom">15</property>
+            <property name="margin_start">15</property>
+            <property name="margin_end">15</property>
+            <property name="vexpand">true</property>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">psalm1</property>
+                <property name="title">Psalm 1</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <child>
+                      <object id="psalm1_title" class="GtkLabel">
+                      </object>
+                    </child>
+                    <child>
+                      <object id="psalm1" class="GtkLabel">
+                        <property name="vexpand">true</property>
+                        <property name="valign">GTK_ALIGN_START</property>
+                        <property name="halign">GTK_ALIGN_START</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">psalm2</property>
+                <property name="title">Psalm 2</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <child>
+                      <object id="psalm2_title" class="GtkLabel"></object>
+                    </child>
+                    <child>
+                      <object id="psalm2" class="GtkLabel">
+                        <property name="vexpand">true</property>
+                        <property name="valign">GTK_ALIGN_START</property>
+                        <property name="halign">GTK_ALIGN_START</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">psalm3</property>
+                <property name="title">Psalm 3</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <child>
+                      <object id="psalm3_title" class="GtkLabel"></object>
+                    </child>
+                    <child>
+                      <object id="psalm3" class="GtkLabel">
+                        <property name="vexpand">true</property>
+                        <property name="valign">GTK_ALIGN_START</property>
+                        <property name="halign">GTK_ALIGN_START</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">psalm4</property>
+                <property name="title">Psalm 4</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <child>
+                      <object id="psalm4_title" class="GtkLabel"></object>
+                    </child>
+                    <child>
+                      <object id="psalm4" class="GtkLabel">
+                        <property name="vexpand">true</property>
+                        <property name="valign">GTK_ALIGN_START</property>
+                        <property name="halign">GTK_ALIGN_START</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">psalm5</property>
+                <property name="title">Psalm 5</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                    <child>
+                      <object id="psalm5_title" class="GtkLabel"></object>
+                    </child>
+                    <child>
+                      <object id="psalm5" class="GtkLabel">
+                        <property name="vexpand">true</property>
+                        <property name="valign">GTK_ALIGN_START</property>
+                        <property name="halign">GTK_ALIGN_START</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwViewSwitcherBar">
+            <property name="stack">stack</property>
+            <binding name="reveal">
+              <lookup name="title-visible">title</lookup>
+            </binding>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

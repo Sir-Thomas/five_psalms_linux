@@ -1,4 +1,3 @@
 src/Application.vala
-src/Widgets/ApplicationWindow.vala
 data/five_psalms_linux.desktop.in
 data/five_psalms_linux.appdata.xml.in
