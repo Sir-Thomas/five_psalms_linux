@@ -6,7 +6,8 @@ executable(
     'Application.vala',
     dependencies: [
         dependency('libadwaita-1'),
-        dependency('libsoup-3.0')
+        dependency('libsoup-3.0'),
+        dependency('json-glib-1.0')
     ],
     install: true
 )

@@ -19,29 +19,24 @@
         <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
         <child>
           <object id="stack" class="AdwViewStack">
-            <property name="margin_top">15</property>
-            <property name="margin_bottom">15</property>
-            <property name="margin_start">15</property>
-            <property name="margin_end">15</property>
             <property name="vexpand">true</property>
             <child>
               <object class="AdwViewStackPage">
                 <property name="name">psalm1</property>
                 <property name="title">Psalm 1</property>
                 <property name="child">
-                  <object class="GtkBox">
-                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
-                    <child>
-                      <object id="psalm1_title" class="GtkLabel">
-                      </object>
-                    </child>
-                    <child>
-                      <object id="psalm1" class="GtkLabel">
-                        <property name="vexpand">true</property>
-                        <property name="valign">GTK_ALIGN_START</property>
-                        <property name="halign">GTK_ALIGN_START</property>
-                      </object>
-                    </child>
+                  <object id="psalm1_page" class="AdwStatusPage">
+                      <property name="title">Psalm 1</property>
+                      <child>
+                        <object class="AdwClamp">
+                          <property name="maximum-size">500</property>
+                          <child>
+                            <object id="psalm1" class="GtkLabel">
+                              <property name="wrap">true</property>
+                            </object>
+                          </child>
+                        </object>
+                      </child>
                   </object>
                 </property>
               </object>
@@ -51,16 +46,12 @@
                 <property name="name">psalm2</property>
                 <property name="title">Psalm 2</property>
                 <property name="child">
-                  <object class="GtkBox">
-                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
-                    <child>
-                      <object id="psalm2_title" class="GtkLabel"></object>
-                    </child>
+                  <object id="psalm2_page" class="AdwStatusPage">
+                    <property name="title">Psalm 2</property>
                     <child>
                       <object id="psalm2" class="GtkLabel">
                         <property name="vexpand">true</property>
-                        <property name="valign">GTK_ALIGN_START</property>
-                        <property name="halign">GTK_ALIGN_START</property>
+                        <property name="wrap">true</property>
                       </object>
                     </child>
                   </object>
@@ -72,16 +63,12 @@
                 <property name="name">psalm3</property>
                 <property name="title">Psalm 3</property>
                 <property name="child">
-                  <object class="GtkBox">
-                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
-                    <child>
-                      <object id="psalm3_title" class="GtkLabel"></object>
-                    </child>
+                  <object id="psalm3_page" class="AdwStatusPage">
+                    <property name="title">Psalm 3</property>
                     <child>
                       <object id="psalm3" class="GtkLabel">
                         <property name="vexpand">true</property>
-                        <property name="valign">GTK_ALIGN_START</property>
-                        <property name="halign">GTK_ALIGN_START</property>
+                        <property name="wrap">true</property>
                       </object>
                     </child>
                   </object>
@@ -93,16 +80,12 @@
                 <property name="name">psalm4</property>
                 <property name="title">Psalm 4</property>
                 <property name="child">
-                  <object class="GtkBox">
-                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
-                    <child>
-                      <object id="psalm4_title" class="GtkLabel"></object>
-                    </child>
+                  <object id="psalm4_page" class="AdwStatusPage">
+                    <property name="title">Psalm 4</property>
                     <child>
                       <object id="psalm4" class="GtkLabel">
                         <property name="vexpand">true</property>
-                        <property name="valign">GTK_ALIGN_START</property>
-                        <property name="halign">GTK_ALIGN_START</property>
+                        <property name="wrap">true</property>
                       </object>
                     </child>
                   </object>
@@ -114,16 +97,12 @@
                 <property name="name">psalm5</property>
                 <property name="title">Psalm 5</property>
                 <property name="child">
-                  <object class="GtkBox">
-                    <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
-                    <child>
-                      <object id="psalm5_title" class="GtkLabel"></object>
-                    </child>
+                  <object id="psalm5_page" class="AdwStatusPage">
+                    <property name="title">Psalm 5</property>
                     <child>
                       <object id="psalm5" class="GtkLabel">
                         <property name="vexpand">true</property>
-                        <property name="valign">GTK_ALIGN_START</property>
-                        <property name="halign">GTK_ALIGN_START</property>
+                        <property name="wrap">true</property>
                       </object>
                     </child>
                   </object>

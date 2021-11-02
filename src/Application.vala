@@ -20,37 +20,48 @@ public class FivePsalmsApp : Adw.Application {
     }
 
     void set_titles (Gtk.Builder builder) {
-        var psalm1_title = (Gtk.Label) builder.get_object ("psalm1_title");
-        psalm1_title.set_markup ("<span size=\"xx-large\">Psalm 1</span>");
-        var psalm2_title = (Gtk.Label) builder.get_object ("psalm2_title");
-        psalm2_title.set_markup ("<span size=\"xx-large\">Psalm 2</span>");
-        var psalm3_title = (Gtk.Label) builder.get_object ("psalm3_title");
-        psalm3_title.set_markup ("<span size=\"xx-large\">Psalm 3</span>");
-        var psalm4_title = (Gtk.Label) builder.get_object ("psalm4_title");
-        psalm4_title.set_markup ("<span size=\"xx-large\">Psalm 4</span>");
-        var psalm5_title = (Gtk.Label) builder.get_object ("psalm5_title");
-        psalm5_title.set_markup ("<span size=\"xx-large\">Psalm 5</span>");
+        var psalm1_page = (Adw.StatusPage) builder.get_object ("psalm1_page");
+        psalm1_page.title = "Psalm 1";
+        var psalm2_page = (Adw.StatusPage) builder.get_object ("psalm2_page");
+        psalm2_page.title = "Psalm 2";
+        var psalm3_page = (Adw.StatusPage) builder.get_object ("psalm3_page");
+        psalm3_page.title = "Psalm 3";
+        var psalm4_page = (Adw.StatusPage) builder.get_object ("psalm4_page");
+        psalm4_page.title = "Psalm 4";
+        var psalm5_page = (Adw.StatusPage) builder.get_object ("psalm5_page");
+        psalm5_page.title = "Psalm 5";
     }
 
     void set_content (Gtk.Builder builder) {
         var psalm1 = (Gtk.Label) builder.get_object ("psalm1");
-        psalm1.set_label (get_psalm (1));
+        psalm1.set_text (get_psalm (1));
         var psalm2 = (Gtk.Label) builder.get_object ("psalm2");
-        psalm2.set_label ("Psalm 2");
+        psalm2.set_text (get_psalm (2));
         var psalm3 = (Gtk.Label) builder.get_object ("psalm3");
-        psalm3.set_label ("Psalm 3");
+        psalm3.set_text (get_psalm (3));
         var psalm4 = (Gtk.Label) builder.get_object ("psalm4");
-        psalm4.set_label ("Psalm 4");
+        psalm4.set_text (get_psalm (4));
         var psalm5 = (Gtk.Label) builder.get_object ("psalm5");
-        psalm5.set_label ("Psalm 5");
+        psalm5.set_text (get_psalm (5));
     }
 
     string get_psalm (int psalm) {
-        var url = "https://getbible.net/v2/web/1/2.json";
+        var url = @"https://getbible.net/v2/web/19/$psalm.json";
         var session = new Soup.Session ();
         var message = new Soup.Message ("GET", url);
         var data = session.send_and_read (message);
-        return (string) data.get_data ();
+        var parser = new Json.Parser ();
+        parser.load_from_data ((string) data.get_data ());
+        var root_object = parser.get_root ().get_object ();
+        string passage = "";
+        var verses = root_object.get_array_member ("verses");
+        Json.Object element;
+        for (int i = 0; i < verses.get_length (); i++) {
+            element = verses.get_object_element (i);
+            passage = string.join ("", passage, element.get_string_member ("text"), null);
+        }
+
+        return passage;
     }
 
     public static int main (string[] args) {
