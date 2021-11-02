@@ -26,17 +26,17 @@
                 <property name="title">Psalm 1</property>
                 <property name="child">
                   <object id="psalm1_page" class="AdwStatusPage">
-                      <property name="title">Psalm 1</property>
-                      <child>
-                        <object class="AdwClamp">
-                          <property name="maximum-size">500</property>
-                          <child>
-                            <object id="psalm1" class="GtkLabel">
-                              <property name="wrap">true</property>
-                            </object>
-                          </child>
-                        </object>
-                      </child>
+                    <property name="title">Psalm 1</property>
+                    <child>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">500</property>
+                        <child>
+                          <object id="psalm1" class="GtkLabel">
+                            <property name="wrap">true</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
                   </object>
                 </property>
               </object>
@@ -49,9 +49,13 @@
                   <object id="psalm2_page" class="AdwStatusPage">
                     <property name="title">Psalm 2</property>
                     <child>
-                      <object id="psalm2" class="GtkLabel">
-                        <property name="vexpand">true</property>
-                        <property name="wrap">true</property>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">500</property>
+                        <child>
+                          <object id="psalm2" class="GtkLabel">
+                            <property name="wrap">true</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -66,9 +70,13 @@
                   <object id="psalm3_page" class="AdwStatusPage">
                     <property name="title">Psalm 3</property>
                     <child>
-                      <object id="psalm3" class="GtkLabel">
-                        <property name="vexpand">true</property>
-                        <property name="wrap">true</property>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">500</property>
+                        <child>
+                          <object id="psalm3" class="GtkLabel">
+                            <property name="wrap">true</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -83,9 +91,13 @@
                   <object id="psalm4_page" class="AdwStatusPage">
                     <property name="title">Psalm 4</property>
                     <child>
-                      <object id="psalm4" class="GtkLabel">
-                        <property name="vexpand">true</property>
-                        <property name="wrap">true</property>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">500</property>
+                        <child>
+                          <object id="psalm4" class="GtkLabel">
+                            <property name="wrap">true</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -100,9 +112,13 @@
                   <object id="psalm5_page" class="AdwStatusPage">
                     <property name="title">Psalm 5</property>
                     <child>
-                      <object id="psalm5" class="GtkLabel">
-                        <property name="vexpand">true</property>
-                        <property name="wrap">true</property>
+                      <object class="AdwClamp">
+                        <property name="maximum-size">500</property>
+                        <child>
+                          <object id="psalm5" class="GtkLabel">
+                            <property name="wrap">true</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>

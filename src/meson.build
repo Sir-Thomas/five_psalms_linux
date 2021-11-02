@@ -7,7 +7,8 @@ executable(
     dependencies: [
         dependency('libadwaita-1'),
         dependency('libsoup-3.0'),
-        dependency('json-glib-1.0')
+        dependency('json-glib-1.0'),
+        dependency('gio-2.0')
     ],
     install: true
 )

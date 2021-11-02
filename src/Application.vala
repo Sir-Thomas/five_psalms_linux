@@ -34,15 +34,36 @@ public class FivePsalmsApp : Adw.Application {
 
     void set_content (Gtk.Builder builder) {
         var psalm1 = (Gtk.Label) builder.get_object ("psalm1");
-        psalm1.set_text (get_psalm (1));
         var psalm2 = (Gtk.Label) builder.get_object ("psalm2");
-        psalm2.set_text (get_psalm (2));
         var psalm3 = (Gtk.Label) builder.get_object ("psalm3");
-        psalm3.set_text (get_psalm (3));
         var psalm4 = (Gtk.Label) builder.get_object ("psalm4");
-        psalm4.set_text (get_psalm (4));
         var psalm5 = (Gtk.Label) builder.get_object ("psalm5");
-        psalm5.set_text (get_psalm (5));
+
+        var text1 = new Thread<void> ("get_psalm", () => {
+            psalm1.set_text (get_psalm (1));
+        });
+
+        var text2 = new Thread<void> ("get_psalm", () => {
+            psalm2.set_text (get_psalm (2));
+        });
+
+        var text3 = new Thread<void> ("get_psalm", () => {
+            psalm3.set_text (get_psalm (3));
+        });
+
+        var text4 = new Thread<void> ("get_psalm", () => {
+            psalm4.set_text (get_psalm (4));
+        });
+
+        var text5 = new Thread<void> ("get_psalm", () => {
+            psalm5.set_text (get_psalm (5));
+        });
+
+        text1.join ();
+        text2.join ();
+        text3.join ();
+        text4.join ();
+        text5.join ();
     }
 
     string get_psalm (int psalm) {
