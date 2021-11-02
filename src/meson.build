@@ -5,7 +5,8 @@ executable(
     meson.project_name(),
     'Application.vala',
     dependencies: [
-        dependency('libadwaita-1')
+        dependency('libadwaita-1'),
+        dependency('libsoup-3.0')
     ],
     install: true
 )
