@@ -25,14 +25,21 @@
                 <property name="name">psalm1</property>
                 <property name="title">Psalm 1</property>
                 <property name="child">
-                  <object id="psalm1_page" class="AdwStatusPage">
-                    <property name="title">Psalm 1</property>
+                  <object class="GtkScrolledWindow">
                     <child>
                       <object class="AdwClamp">
-                        <property name="maximum-size">500</property>
+                        <property name="maximum_size">500</property>
                         <child>
-                          <object id="psalm1" class="GtkLabel">
-                            <property name="wrap">true</property>
+                          <object id="psalm1" class="GtkTextView">
+                            <property name="cursor-visible">false</property>
+                            <property name="editable">false</property>
+                            <property name="wrap-mode">word</property>
+                            <property name="top-margin">20</property>
+                            <property name="bottom-margin">20</property>
+                            <property name="left-margin">20</property>
+                            <property name="right-margin">20</property>
+                            <property name="pixels-above-lines">6</property>
+                            <property name="pixels-below-lines">6</property>
                           </object>
                         </child>
                       </object>
@@ -46,14 +53,21 @@
                 <property name="name">psalm2</property>
                 <property name="title">Psalm 2</property>
                 <property name="child">
-                  <object id="psalm2_page" class="AdwStatusPage">
-                    <property name="title">Psalm 2</property>
+                  <object class="GtkScrolledWindow">
                     <child>
                       <object class="AdwClamp">
-                        <property name="maximum-size">500</property>
+                        <property name="maximum_size">500</property>
                         <child>
-                          <object id="psalm2" class="GtkLabel">
-                            <property name="wrap">true</property>
+                          <object id="psalm2" class="GtkTextView">
+                            <property name="cursor-visible">false</property>
+                            <property name="editable">false</property>
+                            <property name="wrap-mode">word</property>
+                            <property name="top-margin">20</property>
+                            <property name="bottom-margin">20</property>
+                            <property name="left-margin">20</property>
+                            <property name="right-margin">20</property>
+                            <property name="pixels-above-lines">6</property>
+                            <property name="pixels-below-lines">6</property>
                           </object>
                         </child>
                       </object>
@@ -67,14 +81,21 @@
                 <property name="name">psalm3</property>
                 <property name="title">Psalm 3</property>
                 <property name="child">
-                  <object id="psalm3_page" class="AdwStatusPage">
-                    <property name="title">Psalm 3</property>
+                  <object class="GtkScrolledWindow">
                     <child>
                       <object class="AdwClamp">
-                        <property name="maximum-size">500</property>
+                        <property name="maximum_size">500</property>
                         <child>
-                          <object id="psalm3" class="GtkLabel">
-                            <property name="wrap">true</property>
+                          <object id="psalm3" class="GtkTextView">
+                            <property name="cursor-visible">false</property>
+                            <property name="editable">false</property>
+                            <property name="wrap-mode">word</property>
+                            <property name="top-margin">20</property>
+                            <property name="bottom-margin">20</property>
+                            <property name="left-margin">20</property>
+                            <property name="right-margin">20</property>
+                            <property name="pixels-above-lines">6</property>
+                            <property name="pixels-below-lines">6</property>
                           </object>
                         </child>
                       </object>
@@ -88,14 +109,21 @@
                 <property name="name">psalm4</property>
                 <property name="title">Psalm 4</property>
                 <property name="child">
-                  <object id="psalm4_page" class="AdwStatusPage">
-                    <property name="title">Psalm 4</property>
+                  <object class="GtkScrolledWindow">
                     <child>
                       <object class="AdwClamp">
-                        <property name="maximum-size">500</property>
+                        <property name="maximum_size">500</property>
                         <child>
-                          <object id="psalm4" class="GtkLabel">
-                            <property name="wrap">true</property>
+                          <object id="psalm4" class="GtkTextView">
+                            <property name="cursor-visible">false</property>
+                            <property name="editable">false</property>
+                            <property name="wrap-mode">word</property>
+                            <property name="top-margin">20</property>
+                            <property name="bottom-margin">20</property>
+                            <property name="left-margin">20</property>
+                            <property name="right-margin">20</property>
+                            <property name="pixels-above-lines">6</property>
+                            <property name="pixels-below-lines">6</property>
                           </object>
                         </child>
                       </object>
@@ -109,14 +137,21 @@
                 <property name="name">psalm5</property>
                 <property name="title">Psalm 5</property>
                 <property name="child">
-                  <object id="psalm5_page" class="AdwStatusPage">
-                    <property name="title">Psalm 5</property>
+                  <object class="GtkScrolledWindow">
                     <child>
                       <object class="AdwClamp">
-                        <property name="maximum-size">500</property>
+                        <property name="maximum_size">500</property>
                         <child>
-                          <object id="psalm5" class="GtkLabel">
-                            <property name="wrap">true</property>
+                          <object id="psalm5" class="GtkTextView">
+                            <property name="cursor-visible">false</property>
+                            <property name="editable">false</property>
+                            <property name="wrap-mode">word</property>
+                            <property name="top-margin">20</property>
+                            <property name="bottom-margin">20</property>
+                            <property name="left-margin">20</property>
+                            <property name="right-margin">20</property>
+                            <property name="pixels-above-lines">6</property>
+                            <property name="pixels-below-lines">6</property>
                           </object>
                         </child>
                       </object>
