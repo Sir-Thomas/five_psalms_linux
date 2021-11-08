@@ -24,6 +24,7 @@
               <object class="AdwViewStackPage">
                 <property name="name">psalm1</property>
                 <property name="title">Psalm 1</property>
+                <property name="icon-name">applications-office</property>
                 <property name="child">
                   <object class="GtkScrolledWindow">
                     <child>
@@ -52,6 +53,7 @@
               <object class="AdwViewStackPage">
                 <property name="name">psalm2</property>
                 <property name="title">Psalm 2</property>
+                <property name="icon-name">applications-office</property>
                 <property name="child">
                   <object class="GtkScrolledWindow">
                     <child>
@@ -80,6 +82,7 @@
               <object class="AdwViewStackPage">
                 <property name="name">psalm3</property>
                 <property name="title">Psalm 3</property>
+                <property name="icon-name">applications-office</property>
                 <property name="child">
                   <object class="GtkScrolledWindow">
                     <child>
@@ -108,6 +111,7 @@
               <object class="AdwViewStackPage">
                 <property name="name">psalm4</property>
                 <property name="title">Psalm 4</property>
+                <property name="icon-name">applications-office</property>
                 <property name="child">
                   <object class="GtkScrolledWindow">
                     <child>
@@ -136,6 +140,7 @@
               <object class="AdwViewStackPage">
                 <property name="name">psalm5</property>
                 <property name="title">Psalm 5</property>
+                <property name="icon-name">applications-office</property>
                 <property name="child">
                   <object class="GtkScrolledWindow">
                     <child>
