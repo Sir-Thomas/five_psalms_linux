@@ -13,23 +13,9 @@ public class FivePsalmsApp : Adw.Application {
         var window = (Gtk.Window) builder.get_object ("window");
         window.set_application (this);
 
-        set_titles (builder);
         set_content (builder);
 
         window.present ();
-    }
-
-    void set_titles (Gtk.Builder builder) {
-        //var psalm1_page = (Adw.StatusPage) builder.get_object ("psalm1_page");
-        //psalm1_page.title = "Psalm 1";
-        //var psalm2_page = (Adw.StatusPage) builder.get_object ("psalm2_page");
-        //psalm2_page.title = "Psalm 2";
-        //var psalm3_page = (Adw.StatusPage) builder.get_object ("psalm3_page");
-        //psalm3_page.title = "Psalm 3";
-        //var psalm4_page = (Adw.StatusPage) builder.get_object ("psalm4_page");
-        //psalm4_page.title = "Psalm 4";
-        //var psalm5_page = (Adw.StatusPage) builder.get_object ("psalm5_page");
-        //psalm5_page.title = "Psalm 5";
     }
 
     void set_content (Gtk.Builder builder) {
