@@ -1,5 +1,7 @@
 
 public class FivePsalmsApp : Adw.Application {
+    int[] num = { 1, 2, 3, 4, 5 };
+
     public FivePsalmsApp () {
         Object (
             application_id: "com.github.sirthomas.five_psalms_linux",
@@ -13,9 +15,16 @@ public class FivePsalmsApp : Adw.Application {
         var window = (Gtk.Window) builder.get_object ("window");
         window.set_application (this);
 
+        set_days ();
         set_content (builder);
 
         window.present ();
+    }
+
+    void set_days () {
+        var now = new GLib.DateTime.now_local ();
+        var day = int.parse (now.format ("%e"));
+        num = { day, day + 30, day + 60, day + 90, day + 120 };
     }
 
     void set_content (Gtk.Builder builder) {
@@ -25,18 +34,31 @@ public class FivePsalmsApp : Adw.Application {
         var psalm4 = (Gtk.TextView) builder.get_object ("psalm4");
         var psalm5 = (Gtk.TextView) builder.get_object ("psalm5");
 
-        string p1 = "<span size=\"xx-large\">Psalm 1</span>\n";
-        string p2 = "<span size=\"xx-large\">Psalm 2</span>\n";
-        string p3 = "<span size=\"xx-large\">Psalm 3</span>\n";
-        string p4 = "<span size=\"xx-large\">Psalm 4</span>\n";
-        string p5 = "<span size=\"xx-large\">Psalm 5</span>\n";
+        string p1 = @"<span size=\"xx-large\">Psalm $(num[0])</span>\n";
+        string p2 = @"<span size=\"xx-large\">Psalm $(num[1])</span>\n";
+        string p3 = @"<span size=\"xx-large\">Psalm $(num[2])</span>\n";
+        string p4 = @"<span size=\"xx-large\">Psalm $(num[3])</span>\n";
+        string p5 = @"<span size=\"xx-large\">Psalm $(num[4])</span>\n";
+
+        var psalm1_page = (Adw.ViewStackPage) builder.get_object ("psalm1-page");
+        var psalm2_page = (Adw.ViewStackPage) builder.get_object ("psalm2-page");
+        var psalm3_page = (Adw.ViewStackPage) builder.get_object ("psalm3-page");
+        var psalm4_page = (Adw.ViewStackPage) builder.get_object ("psalm4-page");
+        var psalm5_page = (Adw.ViewStackPage) builder.get_object ("psalm5-page");
+
+        psalm1_page.title = @"Psalm $(num[0])";
+        psalm2_page.title = @"Psalm $(num[1])";
+        psalm3_page.title = @"Psalm $(num[2])";
+        psalm4_page.title = @"Psalm $(num[3])";
+        psalm5_page.title = @"Psalm $(num[4])";
 
         var text1 = new Thread<void> ("get_psalm", () => {
             var b = new Gtk.TextBuffer(new Gtk.TextTagTable ());
             Gtk.TextIter iter;
             b.get_end_iter (out iter);
             b.insert_markup (ref iter, p1, p1.length);
-            b.insert_markup (ref iter, get_psalm (1), get_psalm (1).length);
+            string p = get_psalm (num[0]);
+            b.insert_markup (ref iter, p, p.length);
             psalm1.buffer = b;
         });
 
@@ -45,7 +67,8 @@ public class FivePsalmsApp : Adw.Application {
             Gtk.TextIter iter;
             b.get_end_iter (out iter);
             b.insert_markup (ref iter, p2, p2.length);
-            b.insert_markup (ref iter, get_psalm (2), get_psalm (2).length);
+            string p = get_psalm (num[1]);
+            b.insert_markup (ref iter, p, p.length);
             psalm2.buffer = b;
         });
 
@@ -54,7 +77,8 @@ public class FivePsalmsApp : Adw.Application {
             Gtk.TextIter iter;
             b.get_end_iter (out iter);
             b.insert_markup (ref iter, p3, p3.length);
-            b.insert_markup (ref iter, get_psalm (3), get_psalm (3).length);
+            string p = get_psalm (num[2]);
+            b.insert_markup (ref iter, p, p.length);
             psalm3.buffer = b;
         });
 
@@ -63,7 +87,8 @@ public class FivePsalmsApp : Adw.Application {
             Gtk.TextIter iter;
             b.get_end_iter (out iter);
             b.insert_markup (ref iter, p4, p4.length);
-            b.insert_markup (ref iter, get_psalm (4), get_psalm (4).length);
+            string p = get_psalm (num[3]);
+            b.insert_markup (ref iter, p, p.length);
             psalm4.buffer = b;
         });
 
@@ -72,7 +97,8 @@ public class FivePsalmsApp : Adw.Application {
             Gtk.TextIter iter;
             b.get_end_iter (out iter);
             b.insert_markup (ref iter, p5, p5.length);
-            b.insert_markup (ref iter, get_psalm (5), get_psalm (5).length);
+            string p = get_psalm (num[4]);
+            b.insert_markup (ref iter, p, p.length);
             psalm5.buffer = b;
         });
 
