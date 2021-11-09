@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <object id="window" class="GtkWindow">
-    <property name="title">Five Psalms</property>
     <property name="default_height">812</property>
     <property name="default_width">375</property>
     <child type="titlebar">
@@ -9,6 +8,7 @@
         <property name="centering-policy">strict</property>
         <child type="title">
           <object class="AdwViewSwitcherTitle" id="title">
+            <property name="title">Five Psalms</property>
             <property name="stack">stack</property>
           </object>
         </child>
