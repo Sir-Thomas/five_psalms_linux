@@ -113,20 +113,25 @@ public class FivePsalmsApp : Adw.Application {
         var url = @"https://getbible.net/v2/web/19/$psalm.json";
         var session = new Soup.Session ();
         var message = new Soup.Message ("GET", url);
-        var data = session.send_and_read (message);
-        var parser = new Json.Parser ();
-        parser.load_from_data ((string) data.get_data ());
-        var root_object = parser.get_root ().get_object ();
-        string passage = "<big>";
-        var verses = root_object.get_array_member ("verses");
-        Json.Object element;
-        for (int i = 0; i < verses.get_length (); i++) {
-            element = verses.get_object_element (i);
-            passage = string.join ("", passage, @"<sup>$(i+1)</sup> ", element.get_string_member ("text")._strip (), " ", null);
-        }
+        try {
+            var data = session.send_and_read (message);
+            var parser = new Json.Parser ();
+            parser.load_from_data ((string) data.get_data ());
+            var root_object = parser.get_root ().get_object ();
+            string passage = "<big>";
+            var verses = root_object.get_array_member ("verses");
+            Json.Object element;
+            for (int i = 0; i < verses.get_length (); i++) {
+                element = verses.get_object_element (i);
+                passage = string.join ("", passage, @"<sup>$(i+1)</sup> ", element.get_string_member ("text")._strip (), " ", null);
+            }
 
-        passage = string.join ("", passage, "</big>", null);
-        return passage;
+            passage = string.join ("", passage, "</big>", null);
+            return passage;
+        } catch (Error e) {
+            stderr.printf ("Could not download Psalm\n");
+            return ("Could not download Psalm");
+        }
     }
 
     public static int main (string[] args) {
