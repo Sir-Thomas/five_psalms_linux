@@ -1,2 +1,10 @@
-# five_psalms_linux
-Remaking my Five Psalms app for linux mobile using vala and libadwaita
+# Five Psalms
+Remaking my Five Psalms app for mobile linux using vala and libadwaita
+
+## Installation Instructions
+```
+meson build --prefix=/usr
+cd build
+ninja
+sudo ninja install
+```
