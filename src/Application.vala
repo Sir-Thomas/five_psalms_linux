@@ -28,18 +28,6 @@ public class FivePsalmsApp : Adw.Application {
     }
 
     void set_content (Gtk.Builder builder) {
-        var psalm1 = (Gtk.TextView) builder.get_object ("psalm1");
-        var psalm2 = (Gtk.TextView) builder.get_object ("psalm2");
-        var psalm3 = (Gtk.TextView) builder.get_object ("psalm3");
-        var psalm4 = (Gtk.TextView) builder.get_object ("psalm4");
-        var psalm5 = (Gtk.TextView) builder.get_object ("psalm5");
-
-        string p1 = @"<span size=\"xx-large\">Psalm $(num[0])</span>\n";
-        string p2 = @"<span size=\"xx-large\">Psalm $(num[1])</span>\n";
-        string p3 = @"<span size=\"xx-large\">Psalm $(num[2])</span>\n";
-        string p4 = @"<span size=\"xx-large\">Psalm $(num[3])</span>\n";
-        string p5 = @"<span size=\"xx-large\">Psalm $(num[4])</span>\n";
-
         var psalm1_page = (Adw.ViewStackPage) builder.get_object ("psalm1-page");
         var psalm2_page = (Adw.ViewStackPage) builder.get_object ("psalm2-page");
         var psalm3_page = (Adw.ViewStackPage) builder.get_object ("psalm3-page");
@@ -51,6 +39,18 @@ public class FivePsalmsApp : Adw.Application {
         psalm3_page.title = @"Psalm $(num[2])";
         psalm4_page.title = @"Psalm $(num[3])";
         psalm5_page.title = @"Psalm $(num[4])";
+
+        var psalm1 = (Gtk.TextView) builder.get_object ("psalm1");
+        var psalm2 = (Gtk.TextView) builder.get_object ("psalm2");
+        var psalm3 = (Gtk.TextView) builder.get_object ("psalm3");
+        var psalm4 = (Gtk.TextView) builder.get_object ("psalm4");
+        var psalm5 = (Gtk.TextView) builder.get_object ("psalm5");
+
+        string p1 = @"<span size=\"xx-large\">Psalm $(num[0])</span>\n";
+        string p2 = @"<span size=\"xx-large\">Psalm $(num[1])</span>\n";
+        string p3 = @"<span size=\"xx-large\">Psalm $(num[2])</span>\n";
+        string p4 = @"<span size=\"xx-large\">Psalm $(num[3])</span>\n";
+        string p5 = @"<span size=\"xx-large\">Psalm $(num[4])</span>\n";
 
         var text1 = new Thread<void> ("get_psalm", () => {
             var b = new Gtk.TextBuffer(new Gtk.TextTagTable ());
